@@ -24,7 +24,7 @@ public class ResultViewClient : IResultViewClient
     private readonly IManagementClient _managementClient;
 
     public ResultViewClient(IManagementClient managementClient)
-        : this(new HttpClient(), managementClient)
+    : this(new HttpClient(), managementClient)
     {
     }
 
