@@ -23,6 +23,11 @@ public class ResultViewClient : IResultViewClient
     private readonly HttpClient _httpClient;
     private readonly IManagementClient _managementClient;
 
+    public ResultViewClient(IManagementClient managementClient)
+        : this(new HttpClient(), managementClient)
+    {
+    }
+
     public ResultViewClient(HttpClient httpClient, IManagementClient managementClient)
     {
         _httpClient = httpClient;
